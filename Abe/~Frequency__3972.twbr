@@ -1,0 +1,1019 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.18.0925.2120                               -->
+<workbook source-build='2018.2.2 (20182.18.0925.2120)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='Frequency_18' path='/workbooks' revision='1.1' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='groups' inline='true' name='federated.0ymy9ef15gut9s1awk6tt0hklg6c' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='groups' name='textscan.0rxabdq0r13cdh15rv9x51h1f5dm'>
+            <connection class='textscan' directory='C:/Users/holozadah/Documents/Final project' filename='groups.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0rxabdq0r13cdh15rv9x51h1f5dm' name='groups.csv' table='[groups#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='numbers' ordinal='0' />
+            <column datatype='integer' name='first' ordinal='1' />
+            <column datatype='integer' name='second' ordinal='2' />
+            <column datatype='integer' name='third' ordinal='3' />
+            <column datatype='integer' name='fourth' ordinal='4' />
+            <column datatype='integer' name='fifth' ordinal='5' />
+            <column datatype='integer' name='Yellow' ordinal='6' />
+          </columns>
+        </relation>
+        <refresh increment-key='' incremental-updates='false' />
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[groups.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>numbers</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[numbers]</local-name>
+            <parent-name>[groups.csv]</parent-name>
+            <remote-alias>numbers</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[first]</local-name>
+            <parent-name>[groups.csv]</parent-name>
+            <remote-alias>first</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>second</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[second]</local-name>
+            <parent-name>[groups.csv]</parent-name>
+            <remote-alias>second</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>third</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[third]</local-name>
+            <parent-name>[groups.csv]</parent-name>
+            <remote-alias>third</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fourth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fourth]</local-name>
+            <parent-name>[groups.csv]</parent-name>
+            <remote-alias>fourth</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fifth</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fifth]</local-name>
+            <parent-name>[groups.csv]</parent-name>
+            <remote-alias>fifth</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Yellow</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Yellow]</local-name>
+            <parent-name>[groups.csv]</parent-name>
+            <remote-alias>Yellow</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='Sum' datatype='integer' name='[Number of Records]' role='dimension' type='ordinal' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Fifth' datatype='integer' name='[fifth]' role='measure' type='quantitative' />
+      <column caption='First' datatype='integer' name='[first]' role='measure' type='quantitative' />
+      <column caption='Fourth' datatype='integer' name='[fourth]' role='measure' type='quantitative' />
+      <column caption='Numbers' datatype='integer' name='[numbers]' role='measure' type='quantitative' />
+      <column caption='Second' datatype='integer' name='[second]' role='measure' type='quantitative' />
+      <column caption='Third' datatype='integer' name='[third]' role='measure' type='quantitative' />
+      <column-instance column='[fifth]' derivation='None' name='[none:fifth:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[first]' derivation='None' name='[none:first:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[numbers]' derivation='None' name='[none:numbers:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[second]' derivation='None' name='[none:second:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[third]' derivation='None' name='[none:third:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Fifth,Numbers)' hidden='true' name='[Action (Fifth,Numbers)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:fifth:ok]' />
+          <groupfilter function='level-members' level='[none:numbers:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (First,Numbers)' hidden='true' name='[Action (First,Numbers)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:first:ok]' />
+          <groupfilter function='level-members' level='[none:numbers:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Numbers,Second)' hidden='true' name='[Action (Numbers,Second)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:numbers:ok]' />
+          <groupfilter function='level-members' level='[none:second:ok]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Numbers,Third)' hidden='true' name='[Action (Numbers,Third)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[none:numbers:ok]' />
+          <groupfilter function='level-members' level='[none:third:ok]' />
+        </groupfilter>
+      </group>
+      <extract count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/holozadah/Documents/My Tableau Repository/Datasources/groups.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='01/18/2019 09:36:24 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh increment-key='' incremental-updates='false'>
+            <refresh-event add-from-file-path='' increment-value='%null%' refresh-type='create' rows-inserted='75' timestamp-start='2019-01-18 21:36:24.996' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>numbers</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[numbers]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>numbers</remote-alias>
+              <ordinal>0</ordinal>
+              <family>groups.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>75</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>first</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[first]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>first</remote-alias>
+              <ordinal>1</ordinal>
+              <family>groups.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>36</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>second</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[second]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>second</remote-alias>
+              <ordinal>2</ordinal>
+              <family>groups.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>36</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>third</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[third]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>third</remote-alias>
+              <ordinal>3</ordinal>
+              <family>groups.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>29</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fourth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[fourth]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fourth</remote-alias>
+              <ordinal>4</ordinal>
+              <family>groups.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>42</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fifth</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[fifth]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fifth</remote-alias>
+              <ordinal>5</ordinal>
+              <family>groups.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>40</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Yellow</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Yellow]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Yellow</remote-alias>
+              <ordinal>6</ordinal>
+              <family>groups.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>29</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' dim-percentage='0.358516' measure-ordering='alphabetic' measure-percentage='0.641484' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.0ymy9ef15gut9s1awk6tt0hklg6c'>
+      <datasources>
+        <datasource caption='groups' name='federated.0ymy9ef15gut9s1awk6tt0hklg6c' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0ymy9ef15gut9s1awk6tt0hklg6c'>
+        <column-instance column='[numbers]' derivation='None' name='[none:numbers:qk]' pivot='key' type='quantitative' />
+        <column caption='Numbers' datatype='integer' name='[numbers]' role='measure' type='quantitative' />
+      </datasource-dependencies>
+      <filter class='quantitative' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]' included-values='non-null' />
+    </shared-view>
+  </shared-views>
+  <actions>
+    <action caption='Filter1' name='[Action1]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Num_vs_Fifth'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='groups' name='federated.0ymy9ef15gut9s1awk6tt0hklg6c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ymy9ef15gut9s1awk6tt0hklg6c'>
+            <column caption='Fifth' datatype='integer' name='[fifth]' role='measure' type='quantitative' />
+            <column caption='First' datatype='integer' name='[first]' role='measure' type='quantitative' />
+            <column-instance column='[fifth]' derivation='None' name='[none:fifth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[first]' derivation='None' name='[none:first:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[numbers]' derivation='None' name='[none:numbers:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[numbers]' derivation='None' name='[none:numbers:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[second]' derivation='None' name='[none:second:ok]' pivot='key' type='ordinal' />
+            <column caption='Numbers' datatype='integer' name='[numbers]' role='measure' type='quantitative' />
+            <column caption='Second' datatype='integer' name='[second]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (First,Numbers)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:first:ok]' />
+              <groupfilter function='level-members' level='[none:numbers:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Numbers,Second)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:numbers:ok]' />
+              <groupfilter function='level-members' level='[none:second:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Numbers,Second)]</column>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]</column>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (First,Numbers)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fifth:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fifth:qk]' />
+              <text column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fifth:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+                <format attr='size' value='0.72464090585708618' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fifth:qk]</rows>
+        <cols>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Num_vs_First'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='groups' name='federated.0ymy9ef15gut9s1awk6tt0hklg6c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ymy9ef15gut9s1awk6tt0hklg6c'>
+            <column aggregation='Sum' datatype='integer' name='[Number of Records]' role='dimension' type='ordinal' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column caption='Fifth' datatype='integer' name='[fifth]' role='measure' type='quantitative' />
+            <column caption='First' datatype='integer' name='[first]' role='measure' type='quantitative' />
+            <column-instance column='[Number of Records]' derivation='None' name='[none:Number of Records:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[fifth]' derivation='None' name='[none:fifth:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[first]' derivation='None' name='[none:first:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[numbers]' derivation='None' name='[none:numbers:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[numbers]' derivation='None' name='[none:numbers:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[second]' derivation='None' name='[none:second:ok]' pivot='key' type='ordinal' />
+            <column caption='Numbers' datatype='integer' name='[numbers]' role='measure' type='quantitative' />
+            <column caption='Second' datatype='integer' name='[second]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Fifth,Numbers)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:fifth:ok]' />
+              <groupfilter function='level-members' level='[none:numbers:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Numbers,Second)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:numbers:ok]' />
+              <groupfilter function='level-members' level='[none:second:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Fifth,Numbers)]</column>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Numbers,Second)]</column>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:first:qk]' palette='red_green_diverging_10_0' reverse='true' symmetric='false' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:first:qk]' value='false' />
+            <format attr='break-on-special' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:first:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:first:qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='14' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:first:qk]' />
+              <lod column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:Number of Records:ok]' />
+              <lod column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:first:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+                <format attr='size' value='0.26287293434143066' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:first:qk]</rows>
+        <cols>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Num_vs_Fourth'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='groups' name='federated.0ymy9ef15gut9s1awk6tt0hklg6c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ymy9ef15gut9s1awk6tt0hklg6c'>
+            <column caption='Fifth' datatype='integer' name='[fifth]' role='measure' type='quantitative' />
+            <column caption='First' datatype='integer' name='[first]' role='measure' type='quantitative' />
+            <column caption='Fourth' datatype='integer' name='[fourth]' role='measure' type='quantitative' />
+            <column-instance column='[fifth]' derivation='None' name='[none:fifth:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[first]' derivation='None' name='[none:first:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[fourth]' derivation='None' name='[none:fourth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[numbers]' derivation='None' name='[none:numbers:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[numbers]' derivation='None' name='[none:numbers:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[second]' derivation='None' name='[none:second:ok]' pivot='key' type='ordinal' />
+            <column caption='Numbers' datatype='integer' name='[numbers]' role='measure' type='quantitative' />
+            <column caption='Second' datatype='integer' name='[second]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Fifth,Numbers)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:fifth:ok]' />
+              <groupfilter function='level-members' level='[none:numbers:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (First,Numbers)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:first:ok]' />
+              <groupfilter function='level-members' level='[none:numbers:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Numbers,Second)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:numbers:ok]' />
+              <groupfilter function='level-members' level='[none:second:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]</column>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Fifth,Numbers)]</column>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Numbers,Second)]</column>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (First,Numbers)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fourth:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fourth:qk]' value='false' />
+            <format attr='break-on-special' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fourth:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fourth:qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fourth:qk]' />
+              <text column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fourth:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+                <format attr='size' value='0.31784531474113464' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fourth:qk]</rows>
+        <cols>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Num_vs_Second'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='groups' name='federated.0ymy9ef15gut9s1awk6tt0hklg6c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ymy9ef15gut9s1awk6tt0hklg6c'>
+            <column caption='Fifth' datatype='integer' name='[fifth]' role='measure' type='quantitative' />
+            <column caption='First' datatype='integer' name='[first]' role='measure' type='quantitative' />
+            <column-instance column='[fifth]' derivation='None' name='[none:fifth:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[first]' derivation='None' name='[none:first:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[numbers]' derivation='None' name='[none:numbers:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[numbers]' derivation='None' name='[none:numbers:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[second]' derivation='None' name='[none:second:qk]' pivot='key' type='quantitative' />
+            <column caption='Numbers' datatype='integer' name='[numbers]' role='measure' type='quantitative' />
+            <column caption='Second' datatype='integer' name='[second]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Fifth,Numbers)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:fifth:ok]' />
+              <groupfilter function='level-members' level='[none:numbers:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (First,Numbers)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:first:ok]' />
+              <groupfilter function='level-members' level='[none:numbers:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]</column>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Fifth,Numbers)]</column>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (First,Numbers)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:second:qk]' palette='red_green_diverging_10_0' reverse='true' symmetric='false' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:second:qk]' value='false' />
+            <format attr='break-on-special' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:second:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:second:qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:second:qk]' />
+              <text column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:second:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+                <format attr='size' value='0.37281766533851624' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:second:qk]</rows>
+        <cols>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Num_vs_Third'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='groups' name='federated.0ymy9ef15gut9s1awk6tt0hklg6c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ymy9ef15gut9s1awk6tt0hklg6c'>
+            <column caption='Fifth' datatype='integer' name='[fifth]' role='measure' type='quantitative' />
+            <column caption='First' datatype='integer' name='[first]' role='measure' type='quantitative' />
+            <column-instance column='[fifth]' derivation='None' name='[none:fifth:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[first]' derivation='None' name='[none:first:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[numbers]' derivation='None' name='[none:numbers:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[numbers]' derivation='None' name='[none:numbers:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[second]' derivation='None' name='[none:second:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[third]' derivation='None' name='[none:third:qk]' pivot='key' type='quantitative' />
+            <column caption='Numbers' datatype='integer' name='[numbers]' role='measure' type='quantitative' />
+            <column caption='Second' datatype='integer' name='[second]' role='measure' type='quantitative' />
+            <column caption='Third' datatype='integer' name='[third]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Fifth,Numbers)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:fifth:ok]' />
+              <groupfilter function='level-members' level='[none:numbers:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (First,Numbers)]'>
+            <groupfilter function='union' user:ui-action-filter='[Action1]' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='member' level='[none:first:ok]' member='77' />
+                <groupfilter function='member' level='[none:numbers:ok]' member='3' />
+              </groupfilter>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='member' level='[none:first:ok]' member='85' />
+                <groupfilter function='member' level='[none:numbers:ok]' member='1' />
+              </groupfilter>
+              <groupfilter function='crossjoin'>
+                <groupfilter function='member' level='[none:first:ok]' member='93' />
+                <groupfilter function='member' level='[none:numbers:ok]' member='2' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Numbers,Second)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:numbers:ok]' />
+              <groupfilter function='level-members' level='[none:second:ok]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]</column>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Fifth,Numbers)]</column>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (Numbers,Second)]</column>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[Action (First,Numbers)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:third:qk]' palette='red_green_diverging_10_0' reverse='true' type='interpolated' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='omit-on-special' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:third:qk]' value='false' />
+            <format attr='break-on-special' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:third:qk]' value='false' />
+            <format attr='show-null-value-warning' field='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:third:qk]' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:third:qk]' />
+              <text column='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:third:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+                <format attr='size' value='0.2738673985004425' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:third:qk]</rows>
+        <cols>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 6'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='groups' name='federated.0ymy9ef15gut9s1awk6tt0hklg6c' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ymy9ef15gut9s1awk6tt0hklg6c'>
+            <column caption='First' datatype='integer' name='[first]' role='measure' type='quantitative' />
+            <column caption='Fourth' datatype='integer' name='[fourth]' role='measure' type='quantitative' />
+            <column-instance column='[first]' derivation='None' name='[none:first:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[fourth]' derivation='None' name='[none:fourth:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[numbers]' derivation='None' name='[none:numbers:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[second]' derivation='None' name='[none:second:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[third]' derivation='None' name='[none:third:qk]' pivot='key' type='quantitative' />
+            <column caption='Numbers' datatype='integer' name='[numbers]' role='measure' type='quantitative' />
+            <column caption='Second' datatype='integer' name='[second]' role='measure' type='quantitative' />
+            <column caption='Third' datatype='integer' name='[third]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Polygon' />
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:second:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Polygon' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:first:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Polygon' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:third:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Polygon' />
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fourth:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Polygon' />
+          </pane>
+        </panes>
+        <rows>([federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:second:qk] + ([federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:first:qk] + ([federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:third:qk] + [federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fourth:qk])))</rows>
+        <cols>[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <datasources>
+        <datasource caption='groups' name='federated.0ymy9ef15gut9s1awk6tt0hklg6c' />
+      </datasources>
+      <datasource-dependencies datasource='federated.0ymy9ef15gut9s1awk6tt0hklg6c'>
+        <column-instance column='[numbers]' derivation='None' name='[none:numbers:qk]' pivot='key' type='quantitative' />
+        <column caption='Numbers' datatype='integer' name='[numbers]' role='measure' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='3' type='layout-basic' w='82400' x='800' y='1000'>
+              <zone h='32666' id='1' name='Num_vs_First' w='41200' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='32666' id='7' name='Num_vs_Second' w='41200' x='42000' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='32666' id='9' name='Num_vs_Third' w='41200' x='800' y='66334'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='32666' id='11' name='Num_vs_Fourth' w='41200' x='42000' y='66334'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='32668' id='13' name='Num_vs_Fifth' w='82400' x='800' y='33666'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='98000' id='4' is-fixed='true' param='vert' type='layout-flow' w='16000' x='83200' y='1000'>
+              <zone h='9125' id='6' name='Num_vs_First' pane-specification-id='6' param='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:first:qk]' type='color' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='12500' id='8' name='Num_vs_Second' param='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]' show-domain='false' show-morefewerbutton='true' show-null-ctrls='true' type='filter' w='16000' x='83200' y='10125'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='9125' id='14' name='Num_vs_Fifth' pane-specification-id='0' param='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fifth:qk]' single-line='false' type='color' w='16000' x='83200' y='22625'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Num_vs_First'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='14' param='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:first:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Num_vs_Second'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Num_vs_Third'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Num_vs_Fourth'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:numbers:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='worksheet' name='Num_vs_Fifth'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ymy9ef15gut9s1awk6tt0hklg6c].[none:fifth:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Num_vs_Fifth'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Num_vs_First'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Num_vs_Fourth'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Num_vs_Second'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Num_vs_Third'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='1' />
+    </window>
+    <window class='worksheet' name='Sheet 6'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+    </window>
+  </windows>
+</workbook>
