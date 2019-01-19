@@ -25,7 +25,7 @@ class Database:
 
 @app.route('/')
 def lottery():
-    
+     
  
     def db_query():
         db = Database()
