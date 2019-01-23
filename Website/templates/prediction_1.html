@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+<head>  
+  <meta charset="utf-8">
+  <title>Mega Millions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="static/css/style.css"> -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="http://127.0.0.1:5000">Money Ball</a>
+          
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="http://127.0.0.1:5000">Home</a></li>
+            <li><a href="http://127.0.0.1:8000/tableau.html">Visualizations</a></li>
+            <li><a href="http://127.0.0.1:8000/about.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>Mega Millions</h1>
+    </div>
+    <div class="container">
+      <h2>Predict your Lotto Chance</h2>
+      <p> Enter five numbers plus a Mega Multiplier, our model will rate your chances of winning based on historical outcomes</p>
+      <form action = "http://localhost:5000/predict" method = "post">
+          1st Number:<br>  <input type="text" name="num1" /><br />
+          2nd Number: <br>  <input type="text" name="num2" /><br />
+          3rd Number:<br>   <input type="text" name="num3" /><br />
+          4th Number:<br>   <input type="text" name="num4" /><br />
+          5th Number:<br> <input type="text" name="num5" /><br />
+          Mega Multiplier:<br>   <input type="text" name="num6" /><br />
+          <br>
+          <input type="submit" name="predict" value="predict" />
+          <br>
+          <br>
+          <br>
+
+        
+          <div class="col-md-10">
+              <div id="table-area" class="">
+                <table id="lottery" style="width:100%">
+                  <tr>
+                      <th>1st Number</th>
+                      <th>2nd Number</th>
+                      <th>3rd Number</th>
+                      <th>4th Number</th>
+                      <th>5th Number</th>
+                      <th>Megaplier</th>
+                      <th>Probablity to Win</th>
+                      
+                  </tr>
+                 {% if predicted_result %}
+                  <tr>
+                      <td> {{ predicted_result[0] }}</td>
+                      <td> {{ predicted_result[1] }}</td>
+                      <td> {{ predicted_result[2] }}</td>
+                      <td> {{ predicted_result[3] }}</td>
+                      <td> {{ predicted_result[4] }}</td>
+                      <td> {{ predicted_result[5] }}</td>
+                      <td> {{ predicted_result[6] }}</td>
+                    
+                      
+                  </tr>
+                 {% endif %}
+              </table>
+
+              
+              </div>
+            </div>
+          <br>
+          
+
+         </form>
+         <form action = "http://localhost:5000/generate" method = "post">
+         
+        <div>
+          <h2>Generate Numbers</h2>
+          <p>Click here to generate your lucky numbers based on previous Mega Millions outcomes</p>
+          <input type="submit" class="btn btn-primary btn-lg" name='generate' value=" Print Ticket">
+
+        </div>
+
+        <br>
+          <br>
+          <br>
+
+        
+          <div class="col-md-10">
+              <div id="table-area" class="">
+                <table id="lottery" style="width:100%">
+                  <tr>
+                      <th>1st Number</th>
+                      <th>2nd Number</th>
+                      <th>3rd Number</th>
+                      <th>4th Number</th>
+                      <th>5th Number</th>
+                      <th>Megaplier</th>
+                      <th>Probablity to Win</th>
+                      
+                  </tr>
+                 {% if result %}
+                  <tr>
+                      <td> {{ result[0] }}</td>
+                      <td> {{ result[1] }}</td>
+                      <td> {{ result[2] }}</td>
+                      <td> {{ result[3] }}</td>
+                      <td> {{ result[4] }}</td>
+                      <td> {{ result[5] }}</td>
+                      <td> {{ result[6] }}</td>
+                      
+                      
+                  </tr>
+                  {% endif %}
+                 
+              </table>
+              <br>
+              <br>
+              <br>
+
+              
+              </div>
+            </div>
+          <br>
+        </form>
+
+
+
+          <!-- <select id="selDataset" onchange="getData(this.value)">
+            <option value="dataset1">Zip Code</option>
+            <option value="dataset2">City</option>
+            <option value="dataset3">Business</option>
+          </select> -->
+
+          <!-- <label id="fill2" for="fill">Choose your 5 Numbers:</label>
+         </form>
+         <form id= "name_of_func" action = "http://localhost:5000/login" method = "post">
+          <p><input type = "text" name = "nm" /></p>
+          <p><input type = "text" name = "nm" /></p>
+          <p><input type = "text" name = "nm" /></p>
+          <p><input type = "text" name = "nm" /></p>
+          <p><input type = "text" name = "nm" /></p>
+          <p><input type = "submit" value = "submit" /></p>
+          </form> -->
