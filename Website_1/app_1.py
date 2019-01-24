@@ -77,19 +77,19 @@ def predict_results(numbers):
     range_result = ['Nominal Chance','Slight Chance','Low Chance','Average Chance', 'Good Chance','Better Chance','Best Chance']
 
     # Classify the results based on the total probabilities outcome
-    if prob_total <= 1e-7 and prob_total > 1e-10:
+    if float(prob_total) > 1e-7:
         return (range_result[6])
-    elif prob_total <= 1e-10 and prob_total > 1e-11:
+    elif float(prob_total) > 1e-8:
         return (range_result[5])
-    elif prob_total <= 1e-11 and prob_total > 1e-12:
+    elif float(prob_total) > 1e-9:
         return (range_result[4])
-    elif prob_total <= 1e-12 and prob_total > 1e-13:
+    elif float(prob_total) > 1e-10:
         return (range_result[3])
-    elif prob_total <= 1e-13 and prob_total > 1e-14:
+    elif float(prob_total) > 1e-11:
         return (range_result[2])
-    elif prob_total <= 1e-14 and prob_total > 1e-15:
+    elif float(prob_total) > 1e-15:
         return (range_result[1])
-    elif prob_total <= 1e-15:
+    elif float(prob_total) <= 1e-15:
         return (range_result[0])
         
 
